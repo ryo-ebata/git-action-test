@@ -1,6 +1,9 @@
 name: Slack
 
-on: push
+on: 
+  push:
+    paths:
+      - "index.html"
 
 jobs:
   slack:
