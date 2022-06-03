@@ -1,18 +1,16 @@
 name: Slack
 
 on: push
-  branches: 
-    - main
-  paths: 
-    - "REEDME.md"
 
-jobs: 
+jobs:
   slack:
-    run-on: ubuntu-latest
+    # Ubuntu
+    runs-on: ubuntu-latest
     steps:
+      # Slack
       - name: Slack Notification
         uses: tokorom/action-slack-incoming-webhook@main
-        env: 
+        env:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
           text: Github Actions Slack Notification
