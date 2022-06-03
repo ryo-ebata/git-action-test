@@ -16,4 +16,5 @@ jobs:
         env:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
-          text: ファイルがpushされました！
+          icon_emoji: 
+          text: @miura_shiho ⚠️composer.jsonが更新されました⚠️
